@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memento Mori</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Memento Mori</h1>
+        <form id="lifeForm">
+            <div class="form-container">
+                <div class="input-group">
+                    <label>Birth Date:</label>
+                    <input type="date" id="birthDate" required pattern="\d{2}/\d{2}/\d{4}">
+                </div>
+                <div class="input-group">
+                    <label>Target Age:</label>
+                    <input type="number" id="targetAge" min="1" max="150" required>
+                </div>
+                <button type="submit">Get Perspective</button>
+            </div>
+        </form>
+        <div class="stats-container">
+            <div class="stat-item">
+                <span class="stat-value">
+                    <span id="yearsPassed">-</span><span id="yearsLeft">-</span>
+                </span>
+                <span class="stat-label">Years</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value">
+                    <span id="monthsPassed">-</span><span id="monthsLeft">-</span>
+                </span>
+                <span class="stat-label">Months</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value">
+                    <span id="weeksPassed">-</span><span id="weeksLeft">-</span>
+                </span>
+                <span class="stat-label">Weeks</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value">
+                    <span id="daysPassed">-</span><span id="daysLeft">-</span>
+                </span>
+                <span class="stat-label">Days</span>
+            </div>
+            <div class="stat-item live-counter">
+                <span class="stat-value">
+                    <span id="hoursLeft">00</span>:<span id="minutesLeft">00</span>:<span id="secondsLeft">00</span>
+                </span>
+                <span class="stat-label">Time Left</span>
+            </div>
+        </div>
+        <div id="loader" class="loader-container">
+            <div class="loader"></div>
+            <p class="loader-text">Counting every precious moment of your life... 🎯</p>
+        </div>
+        <div id="lifeGrid" class="life-grid">
+            <div class="initial-skull">💀</div>
+        </div>
+    </div>
+
+    <div id="ageModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h2>Whoa there, optimist! 🧙‍♂️</h2>
+            <p>Even with the most advanced technology and a really good skincare routine, we're capping this at 150 years.</p>
+        </div>
+    </div>
+
+    <div id="pastAgeModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h2>Time Travel Not Available! ⏰</h2>
+            <p>Unless you've got a DeLorean parked outside, we can't set your target age lower than your current age!</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
