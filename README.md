@@ -1,4 +1,4 @@
-# Memento Mori Calendar
+# Memento Mori App
 
 A visual representation of your life in days, helping you gain perspective on time. This interactive web application shows you how many days you've lived and how many you have left based on your target age.
 
@@ -28,4 +28,4 @@ A visual representation of your life in days, helping you gain perspective on ti
 
 ## Live Demo
 
-Visit [https://[your-username].github.io/memento-mori-calendar/](https://[your-username].github.io/memento-mori-calendar/) 
+Visit [https://SimonChamorroQ.github.io/Memento-Mori-App/](https://SimonChamorroQ.github.io/Memento-Mori-App/) 
