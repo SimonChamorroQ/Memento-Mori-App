@@ -34,6 +34,8 @@ h1 {
     display: flex;
     gap: 20px;
     align-items: flex-end;
+    padding: 0 10px;
+    box-sizing: border-box;
 }
 
 .input-group {
@@ -130,10 +132,7 @@ form {
     padding: 15px;
     background-color: white;
     border-radius: 4px;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    z-index: 1;
+    margin: 10px 0;
 }
 
 .stat-item {
@@ -374,41 +373,56 @@ form {
 @media screen and (max-width: 768px) {
     body {
         padding: 10px;
+        overflow-y: auto;
+        height: auto;
     }
 
     .container {
         width: calc(100vw - 20px);
-        height: calc(100vh - 20px);
+        height: auto;
+        min-height: 100vh;
+        gap: 10px;
     }
 
     h1 {
         font-size: 1.8rem;
         margin-bottom: 10px;
+        padding: 0 10px;
     }
 
     .form-container {
         flex-direction: column;
         align-items: stretch;
         gap: 10px;
+        order: 1;
+        padding: 0 10px;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .input-group {
         margin: 5px 0;
+        width: 100%;
     }
 
     input {
         width: 100%;
+        box-sizing: border-box;
+    }
+
+    button {
+        width: 100%;
     }
 
     .stats-container {
-        position: static;
-        margin: 10px 0;
-        padding: 10px;
+        order: 2;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
         gap: 8px;
+        padding: 10px;
         width: 100%;
         box-sizing: border-box;
+        margin: 5px 0;
     }
 
     .stat-item {
@@ -427,10 +441,17 @@ form {
 
     .live-counter {
         min-width: unset;
+        width: 100%;
+    }
+
+    .live-counter .stat-value {
+        font-size: 1rem;
+        white-space: nowrap;
     }
 
     .life-grid {
-        height: calc(100vh - 350px);
+        order: 3;
+        height: 60vh;
         padding: 5px;
         margin: 5px 0;
     }
@@ -475,10 +496,14 @@ form {
     }
 
     .life-grid {
-        height: calc(100vh - 380px);
+        height: 50vh;
     }
 
     .initial-skull {
         font-size: 100px;
+    }
+
+    .live-counter .stat-value {
+        font-size: 0.9rem;
     }
 } 
