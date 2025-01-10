@@ -77,11 +77,11 @@ h1 {
 }
 
 .lived {
-    background-color: #93b6d7;
+    background-color: #644df5;
 }
 
 .remaining {
-    background-color: #ecf0f1;
+    background-color: #e72525;
 }
 
 .week-marker {
@@ -163,7 +163,7 @@ form {
 /* Single light gray divider */
 .stat-value span:first-child::after {
     content: '/';
-    margin: 0 4px;
+    margin: 0 2px;
     color: #666;
     opacity: 0.3;
 }
@@ -418,8 +418,8 @@ form {
         order: 2;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
-        gap: 8px;
-        padding: 10px;
+        gap: 6px;
+        padding: 8px;
         width: 100%;
         box-sizing: border-box;
         margin: 5px 0;
@@ -427,16 +427,16 @@ form {
 
     .stat-item {
         min-width: unset;
-        padding: 4px;
+        padding: 3px;
     }
 
     .stat-value {
-        font-size: 1rem;
-        gap: 2px;
+        font-size: 0.85rem;
+        gap: 1px;
     }
 
     .stat-label {
-        font-size: 0.7rem;
+        font-size: 0.65rem;
     }
 
     .live-counter {
@@ -445,7 +445,7 @@ form {
     }
 
     .live-counter .stat-value {
-        font-size: 1rem;
+        font-size: 0.85rem;
         white-space: nowrap;
     }
 
@@ -477,21 +477,25 @@ form {
         font-size: 1rem;
         padding: 0 20px;
     }
+
+    .stat-value span:first-child::after {
+        margin: 0 1px;
+    }
 }
 
 /* Small phones */
 @media screen and (max-width: 380px) {
     .stats-container {
-        gap: 6px;
-        padding: 8px;
+        gap: 4px;
+        padding: 6px;
     }
 
     .stat-value {
-        font-size: 0.9rem;
+        font-size: 0.75rem;
     }
 
     .stat-label {
-        font-size: 0.65rem;
+        font-size: 0.6rem;
         margin-top: 2px;
     }
 
@@ -504,6 +508,10 @@ form {
     }
 
     .live-counter .stat-value {
-        font-size: 0.9rem;
+        font-size: 0.75rem;
+    }
+
+    .stat-value span:first-child::after {
+        margin: 0 1px;
     }
 } 
